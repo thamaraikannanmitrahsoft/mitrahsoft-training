@@ -1,0 +1,21 @@
+Task 1:
+1. Create an array for pushing the student details fetched from the JSON with grade. Also create inteface for the student array. Here the age will be optional.
+2. Avoid students who don't have rank.
+3. Create a seperate function called fetchStudentDetails and Calculate the grade of each student with fetchGrade function.The grade calculation will be as 
+   Rank<=10 then 'A+',Rank<=15 then 'A',Rank<=25 then 'B',Rank>25 then 'C'
+4. The output should be like
+    [{name:John,age:13,Rank:1,Grade:"A"},{name:John,age:13,Rank:1,Grade:"B"},{name:John,age:13,Rank:1,Grade:"C"}]
+
+
+
+[
+  { "name": "JOHN", "age": 13, "rank": 2 },
+  { "name": "HARRY", "age": 13, "rank": 1 },
+  { "name": "VENOM", "age": 13, "rank": 10 },
+  { "name": "MARK", "age": 13, "rank": 11 },
+  { "name": "BROCK", "age": 13, "rank": 40 },
+  { "name": "HENRY", "age": 13, "rank": "" },
+  { "name": "TIM", "age": 13, "rank": 27 },
+  { "name": "MARRY", "age": 13, "rank": 22 },
+  { "name": "MANOJ", "age": 13, "rank": 12 }
+]

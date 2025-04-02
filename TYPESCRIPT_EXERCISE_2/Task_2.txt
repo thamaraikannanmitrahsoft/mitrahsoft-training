@@ -1,0 +1,10 @@
+Task 2:
+1. Create a function named student performance, to add performance of each student.
+2. Add performance for each student. The performance value is  {
+      "Excellent",
+      "Very Good",
+      "Good",
+      "Need Improvement"
+    }. 
+ Use ENUM and fetch the performance with the index. For A+ the index will be 0, A index is 1, B index is 2 and C index will be 3.
+3. Create a variable for fetching the 1st rank student and store his details in an object. Need to use assertion in this variable.

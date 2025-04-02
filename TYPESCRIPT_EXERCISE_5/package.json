@@ -1,0 +1,12 @@
+{
+  "name": "typescript_exercise_5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
