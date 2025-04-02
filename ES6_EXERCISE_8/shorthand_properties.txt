@@ -1,0 +1,13 @@
+ 1) construct an object using the variables below and print all the data. 
+    var name = 'babu';
+    var age = '24';
+    var city = 'KVP';
+  Desc: display that object in console.log()
+Note: Use the console to print the result and display it in terminal.
+ 
+2) construct a new object using the variables below. display the name, college and class from that new object. 
+    var name = 'babu';
+    var age = '24';
+  var education = { college: 'UTI', degree: 'BE', class: 'first class', location: 'cbe' };
+  Desc: add education object, name and age inside that new object. Then you have to show name, college and class.
+Note: Use the console to print the result and display it in terminal.

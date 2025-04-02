@@ -1,0 +1,10 @@
+.gradient-custom {
+    background: -webkit-linear-gradient(left, #a1c4fd, #c2e9fb);
+    height: 60rem;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+form{
+    height: 90vh;
+}

@@ -1,0 +1,36 @@
+1. Display the details: student details using loop the keys array.
+        const student = {
+            name: 'raja',
+            age: 12,
+            standard: 7,
+            sports: 'football',
+            rank: 8
+        };
+const keys = ['name', 'age', 'standard', 'rank'];
+Note: Use the console to print the result and display it in terminal.
+
+2. Display a select box with options(country code of the below object). 
+        Const country = {
+            "IE": "Ireland",
+            "IM": "Isle of Man",
+            "IL": "Israel",
+            "IT": "Italy",
+            "JM": "Jamaica",
+            "JP": "Japan",
+            "JE": "Jersey",
+            "JO": "Jordan",
+            "KZ": "Kazakhstan"
+        }
+Actions & hints:
+1. Create a html page with a select box.
+2. selectbox should have the country code as a option.
+3. Add div next to the selectbox for display the result.  
+4. If a user selects a code in the select box, display the corresponding country name dynamically.
+
+3. Color selection dynamically
+Actions & hints:
+1. Create a html page with three Radio buttons has value as red, blue and green.
+2. Define a common handler function to store the value of the Radio button group. 
+3. Pass the value as an argument to that function while onChange(ex: onChange=”objDestruct('red')”).
+4. Create an object variable to maintain the selected value. Update the selected value into that object dynamically using the parameter. 
+5. Console that object. example result format like { red: true, green: false, blue: false } 

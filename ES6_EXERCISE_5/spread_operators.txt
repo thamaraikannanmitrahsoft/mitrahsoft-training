@@ -1,0 +1,45 @@
+1) Declare an array with 5 elements. 
+Define a function to add numbers. Numbers should be taken from parameters. 
+Spread the array as an argument while calling the function and print the result.
+Note:Use the console to print the result and display it in terminal.
+
+2) Create an object with the values same as below user object using spread operator and also include the marks: [67, 34, 54,72,56], grade: II.
+const user = {
+	name: 'karthick',
+	age: 12,
+    standard: 7
+};
+Note:Use the console to print the result and display it in terminal.
+
+3) Construct an object using the employee object below using spread and overwrite the email id to 'sr@mitrahsoft.com'.
+const employee = {
+	name: 'ajay',
+	age: 26,
+	designation: 'software engineer',
+	email: 'sr@gmail.com'
+};
+Note:Use the console to print the result and display it in terminal.
+
+4) Construct new object along with stock object values using spread operator and merge given array values:
+const stock = {
+	pencil: {
+		name: 'natraj',
+        type: ['HB', '2H', 'H'],
+        rate: [3, 5, 5],
+        available_stock: 250
+    },
+    note_book: {
+        name: 'class mate',
+        type: ['long size', 'king size'],
+        rate: [35, 20],
+        available_stock: 500
+    }
+};
+ i) merge below array values into the pencil’s rate field:
+    [6, 10].
+ ii) merge below array into type value of note_book object:
+    ['small size', 'ruled', 'un ruled'].
+
+Note:Use the console to print that new object and display it in terminal.
+
+

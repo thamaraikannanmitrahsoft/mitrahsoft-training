@@ -1,0 +1,13 @@
+Use this setup for import and export exercises: https://drive.google.com/file/d/11Fs2cIPywQq9u1J9-IvQwuTJQuRXYQDb/view?usp=sharing
+
+1.  Calculator app:
+	Desc: Create a calculator.js file and maintain the add, sub, mul and div functions in the separate js file.
+	Export add as default and other functions as named export. Import the functions in the calculator file and call it with parameters accordingly.
+
+Note: Use the console to print the result and display it in terminal.
+
+2. Import all named export:
+Desc: Create AggregatedFunctions.js file with three functions which are used find max, min, and floor number. Get two params for min and max. single param for floor function
+	Use named export for all those functions. Import those in Calulator.js file using alias name.
+
+Note: Use the console to print the result and display it in terminal.

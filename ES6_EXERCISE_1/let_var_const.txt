@@ -1,0 +1,14 @@
+1.Use for loop to print number 1-10. 
+ Declare the variable in the initialize section using var scope and print that variable after the loop. 
+ Use the same code and try with let scope in the initialize section of for loop.
+
+Note: Use the console to print the result and display it in terminal.
+
+2. Declare the below object using const scope. 
+ create a function to add the new key and value to the that object and log the result.
+	const user = {
+		name: 'ajay',
+	     age: 23,
+		qualification: 'B.E.Csc'
+}
+Note: Use the console to print the result and display it in terminal.

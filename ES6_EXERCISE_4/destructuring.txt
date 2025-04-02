@@ -1,0 +1,147 @@
+1) Print all the names and age of all the users using destructuring.
+{
+  data: [
+    {
+      name: 'kamaraj',
+      age: '23',
+      native: 'KVP'
+    },
+    {
+      name: 'KumarSTR',
+      age: '45',
+      native: 'TVL'
+    },
+    {
+      name: 'Inbaraj',
+      age: '32',
+      native: 'MDU'
+    }
+  ]
+};
+
+Note: Use the console to print the result and display it in terminal.
+
+2) print the rank and grade of the student (use destructure).
+{
+  data: [
+    {
+      name: 'Ajay',
+      personal: {
+        age: '25',
+        native: 'nellai',
+        education: {
+          rank: '2',
+          grade: 'B'
+        },
+        interest: {
+          hobby: 'book reading'
+        }
+      }
+    },
+    {
+      name: 'vicky',
+      personal: {
+        age: '26',
+        native: 'chennai',
+        education: {
+          rank: '3',
+          grade: 'D'
+        },
+        interest: {
+          hobby: 'playing'
+        }
+      }
+    },
+    {
+      name: 'muthu',
+      personal: {
+        age: '35',
+        native: 'madurai',
+        education: {
+          rank: '5',
+          grade: 'F'
+        },
+        interest: {
+          hobby: 'writing'
+        }
+      }
+    }
+  ]
+};
+
+Note: Use the console to print the result and display it in terminal.
+
+3) print the streetName and city of the user (use destructure).
+{
+  data: [
+    {
+      gender: 'Male',
+      requestSource: 'Student',
+      requestStatus: 'Pending',
+      requestData: {
+        educationInfo: [
+          {
+            userEmail: 'Doaulas@rrigg.com',
+            qualification: 'College'
+          }
+        ],
+        personalInfo: [
+          {
+            userFirstName: 'Doaul',
+            userLastName: 'Doaulas',
+            designation: 'Developer',
+            location: {
+              doorNumber: '2323',
+              streetName: 'indra nager',
+              city: 'kovilaptti'
+            }
+          }
+        ]
+      }
+    },
+    {
+      gender: 'Female',
+      requestSource: 'Student',
+      requestStatus: 'Success',
+      requestData: {
+        educationInfo: [
+          {
+            userEmail: 'pooja@rrigg.com',
+            qualification: 'College'
+          }
+        ],
+        personalInfo: [
+          {
+            userFirstName: 'pooja',
+            userLastName: 'kekar',
+            designation: 'Tester',
+            location: {
+              doorNumber: '1236',
+              streetName: 'gandhi gram',
+              city: 'rajasthan'
+            }
+          }
+        ]
+      }
+    }
+  ];
+}
+Note: Use the console to print the result and display it in terminal.
+
+4) print the first name, doorNumber, streetName, pincode (use destructure)
+ [
+      { firstName: 'suresh' },
+      'lname',
+      23,
+      {
+        cityCode: 'KVP',
+        location: {
+          doorNumber: '1236',
+          streetName: 'gandhi gram'
+        }
+      },
+      'tamilnadu',
+      'india',
+      '628502'
+    ]; 
+    Note: Use the console to print the result and display it in terminal.]'

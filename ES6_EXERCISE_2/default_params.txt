@@ -1,0 +1,25 @@
+
+1) Fix this error:
+    var arr = [1, 2, 3, 4, 5];
+
+    function getLength(data) {
+        console.log('length', data.length);
+    };
+
+    getLength();
+
+    Desc: Save and run this code into a js file.
+        1) Fix the error. `Cannot read properties of undefined (reading 'length')`.
+        2) If no arguments are passed into that function, then the result should be print as zero.
+Note:use terminal for display the result.
+
+2) Resolve the error while run this code:
+    function getString(str, position) {
+        console.log('new string:', str.slice(0, position));
+    };
+
+    getString();
+       Desc: Save and run this code into a js file.
+        1) Fix the error. ` Cannot read properties of undefined (reading 'slice')`.
+        2) If no arguments are passed into that function, then the result should be empty string.
+Note:use terminal for display the result.

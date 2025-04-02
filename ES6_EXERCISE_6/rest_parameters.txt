@@ -1,0 +1,63 @@
+1) print all the values except three from the following object?
+
+  { one: 1, two: 2, three: 3, four: 4, five: 5 };
+
+Desc: define a function. call the function with above object values as a parameter. you have to show all the values except three.
+Note: Use the console to print the result and display it in terminal.
+
+2) print the nick name and email of the user?
+      {
+        Name: 'kumar',
+        age: 25,
+        address: 2317,
+        city: 'kovilpatti',
+        personalInfo: [{ nickName: 'GK', email: 'kumar@mitrahsoft.com', phone: 123456 }]
+      };
+      Desc: define a function. call the function with above object values as a parameter. show the result using deep destructuring and rest parameter.
+Note: Use the console to print the result and display it in terminal.
+
+
+3) print the maruthi details only
+    car = {
+        manufacturer: {
+          toyota: [
+            {
+              vitz: {
+                color: 'Blue',
+                bodyType: 'Hatchback'
+              },
+              corolla: {
+                color: 'Silver',
+                bodyType: 'Sedan'
+              }
+            }
+          ],
+          Honda: [
+            {
+              civic: {
+                color: 'White',
+                bodyType: 'Hatchback'
+              },
+              city: {
+                color: 'Black',
+                bodyType: 'Sedan'
+              }
+            }
+          ],
+          Maruthi: [
+            {
+              Brezza: {
+                color: 'White',
+                bodyType: 'SUV'
+              },
+              Ciaz: { 
+                color: 'Black',
+                bodyType: 'Sedan'
+              }
+            }
+          ]
+        }
+      }; 
+ Desc: define a function. call the function with above object values as a parameter. 
+ Display the honda city and maruthi Ciaz details using deep destructuring and rest parameter.
+Note: Use the console to print the result and display it in terminal.
