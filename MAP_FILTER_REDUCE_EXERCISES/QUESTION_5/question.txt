@@ -1,0 +1,7 @@
+const arr = [
+  { name: 'John', age: 25 },
+  { name: 'Mary', age: 30 },
+  { name: 'Peter', age: 35 }
+];
+
+output: [ { name: 'JOHN', age: 25 }, { name: 'MARY', age: 30 }, { name: 'PETER', age: 35 } ]
