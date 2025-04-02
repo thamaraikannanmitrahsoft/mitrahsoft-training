@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI DESIGN 2</title>
+        <link rel="stylesheet" href="assets/styles/style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="containerOne">
+                <div class="formImage">
+                    <img id="image" src="assets/images/formImg.jpg" alt="image">
+                </div>
+                <div class="centerText">
+                    <p class="text">REGISTER NOW</p>
+                    <p>While seats are available!</p>
+                </div>
+            </div>
+            <div class="containerTwo">
+                <div class="inputRow">
+                    <div class="inputRowOne">
+                        <label for="fname">FIRST NAME <span class="star">*</span></label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="inputRowTwo">
+                        <div class="float">
+                            <label for="MEAL">MEAL PREFERENCE</label>
+                            <div class="fontNormal">Lunch detail</div>
+                        </div>
+                        <div class="select">
+                            <select id="meal">
+                                <option>Vegetarian</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputRow">
+                    <div class="inputRowOne">
+                        <label for="lname">LAST NAME <span class="star">*</span></label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div class="inputRowTwo">
+                        <div class="float">
+                            <span class="p">PAYMENT MODE</span>
+                            <div class="fontNormal">Payment Detail</div>
+                        </div>
+                        <div class="radioFont">
+                            <label>
+                                <input type="radio" id="cash" name="payment" value="cash" checked>Cash
+                            </label>
+
+                            <label>
+                                <input type="radio" id="cheque" name="payment" value="Cheque">Cheque
+                            </label>
+
+                            <label>
+                                <input type="radio" id="demand" name="payment" value="Demand Draf">Demand Draf
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputRow">
+                    <div class="inputRowOne">
+                        <label for="company">COMPANY <span class="star">*</span></label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="inputRowTwo">
+                        <label for="dd">DD/CHEQUE NO.</label>
+                        <input type="text" id="dd" name="dd">
+                    </div>
+                </div>
+                <div class="inputRow">
+                    <div class="inputRowOne">
+                        <label for="email">EMAIL <span class="star">*</span></label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="inputRowTwo">
+                        <label for="bank">DRAWN ON(BANK NAME)</label>
+                        <input type="text" id="bank" name="bank">
+                    </div>
+                </div>
+                <div class="inputRow">
+                    <div class="inputRowOne">
+                        <label for="phone">PHONE NUMBER <span class="star">*</span></label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="inputRowTwo">
+                        <label for="payable">PAYABLE AT</label>
+                        <input type="text" id="payable" name="payable">
+                    </div>
+                </div>
+                <div class="sliderContainer">
+                    <p id="textDonate">DONATE US</p>
+                    <div class="rangeSlider">
+                        <input type="range" min="1" max="1000" value="0">
+                        <div class="sliderThumb">
+                            &lt $470 &gt
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="SUBMIT">
+                    <input type="reset" value="RESET">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

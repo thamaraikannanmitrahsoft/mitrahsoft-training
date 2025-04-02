@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI DESIGN 3</title>
+        <link rel="stylesheet" href="assets/styles/style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="logo">
+                <img id="logoImg" src="assets/images/logo.png" alt="logo">
+            </div>
+            <div class="container">
+                <div class="formContainer">
+                    <div class="nameRow">
+                        <div class="leftRow">
+                            <div class="firstNameBorder">
+                                <label for="fname">First name?*</label>
+                                <input type="text" id="fname" name="fname">
+                            </div>
+                        </div>
+                        <div class="rightRow">
+                            <div class="lastNameBorder">
+                                <label for="lname">Last name*</label>
+                                <input type="text" id="lname" name="lname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBox">
+                        <label for="email">Email address*</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="borderBox">
+                        <label for="phone">Phone contact*</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="borderBox">
+                        <P id="address">Current address*</P>
+                        <div class="inputRow addressDetails">
+                            <div class="leftRow">
+                                <label for="street">Street*</label>
+                                <input type="text" id="Street" name="Street">
+                            </div>
+                            <div class="rightRow">
+                                <label for="city">City/Suburb</label>
+                                <input type="text" id="city" name="city">
+                            </div>
+                        </div>
+                        <div class="inputRow addressDetails">
+                            <div class="leftRow">
+                                <label for="state">State*</label>
+                                <input type="text" id="state" name="state">
+                            </div>
+                            <div class="rightRow">
+                                <label for="zip">Zip/Post Code*</label>
+                                <input type="text" id="zip" name="zip">
+                            </div>
+                        </div>
+                        <label class="country" for="country">Country*</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+                    <div class="borderBox">
+                        <label for="propertyInterest">Please list the property or properties of interest*</label>
+                        <textarea id="propertyInterest" name="propertyInterest" rows="9" cols="33"></textarea>
+                    </div>
+                    <div class="borderBox">
+                        <label for="date">When would you like a viewing*</label>
+                        <div class="date">
+                            <div class="dobInput">
+                                <input type="text" id="date" name="date" placeholder="DD / MM / YYYY">
+                            </div>
+                            <img src="assets/images/calendar.png" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="borderBox">
+                        <label for="locaion">Preference of location?*</label>
+                        <div class="select">
+                            <select id="option">
+                                <option>Select...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="borderBox">
+                        <label for="propertyKind">What kind of property are you looking for?*</label>
+                        <div class="select">
+                            <select id="option">
+                                <option>Select...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="borderBox">
+                        <label for="budget">What is your budget?*</label>
+                        <div class="select">
+                            <select id="option">
+                                <option>Select...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <p>Additional comments or requests*</p>
+                        <div class="rangeBar">
+                            <div class="inline value">50000</div>
+                            <div class="range">
+                                <input class="slider" type="range" min="1" max="100" value="100">
+                            </div>
+                            <div class="inline">100</div>
+                        </div>
+                        <div class="rangeValue">100</div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Submit now">
+            </div>
+        </div>
+    </body>
+</html>

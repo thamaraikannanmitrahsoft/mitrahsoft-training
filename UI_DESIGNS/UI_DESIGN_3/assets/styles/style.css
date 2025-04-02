@@ -1,0 +1,160 @@
+.background {
+    background-color: white;
+    width: 45%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+.logo {
+    padding-bottom: 10%;
+}
+.container {
+    border: solid rgb(219, 219, 219);
+    border-bottom: none;
+    border-radius: 3px;
+}
+input[type=text] {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(219 219 219 / 50%);
+    margin-top: 15px;
+}
+.inputRow {
+    display: flex;
+    gap: 20px
+}
+input:focus {
+    outline: none;
+}
+.nameRow, .rangeBar {
+    display: flex;
+    width: 100%;
+}
+.formContainer {
+    padding-bottom: 1%;
+}
+.button {
+    width: 100%;
+}
+.select {
+    width: 100%;
+    position: relative;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #332464;
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    font-size: medium;
+    border: none;
+}
+input[type=range] {
+    appearance: none;
+    width: 99%;
+    height: 7px;
+    background: #332464;
+    border-radius: 10px;
+}
+.leftRow,
+.rightRow {
+    width: 50%;
+}
+#option {
+    appearance: none;
+    width: 100%;
+    padding: 14px 20px;    
+    font-size: 16px;
+    border: 0px;
+    margin-top: 7px;
+    border-bottom: 2px solid #d3d3d36b;
+    color: #80808075;
+    background-color: rgb(127 124 124 / 6%);
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    color: grey;
+    font-size: 12px;
+    top: 24px;
+    right: 0px;
+    padding: 0px 22px;
+}
+#blank {
+    width: 30px;
+}
+#propertyInterest {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-color: rgb(127 124 124 / 6%);
+    border: none;
+    margin-top: 7px;
+}
+.range {
+    flex-grow: 1;
+}
+.slider::-webkit-slider-thumb {
+    appearance: none; 
+    width: 15px; 
+    height: 15px;
+    border-radius: 50%; 
+    background: #332464;
+}
+.inline {
+    color: #332464;
+}
+.rangeValue {
+    position: absolute;
+    top: 49%;
+    right: 6.5%;
+    color: #332464;
+}
+.borderBox {
+    padding-bottom: 15px;
+}
+.firstNameBorder {
+    border-right: 2px solid rgb(219 219 219 / 32%);
+}
+.firstNameBorder, .lastNameBorder, .borderBox {
+    border-bottom: 2px solid rgb(219 219 219 / 32%);
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: 0px 0px 1px 1px #8080802e;
+}
+.comments { 
+    padding: 20px;
+    position: relative;
+}
+#date {
+    margin: 2px;
+    padding: 10px;
+    padding-left: 16px;
+}
+input::placeholder {
+    font-size: medium;
+    color: #808080b3;
+    word-spacing: 13px;
+}
+.addressDetails {
+    margin-bottom: 20px;
+}
+.country, .addressDetails {
+    font-size: 14px;
+    font-weight: 400;
+}
+.date {
+    display: flex;
+    gap: 30px;
+}
+#logoImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.value {
+    margin-right: 10px;
+}
