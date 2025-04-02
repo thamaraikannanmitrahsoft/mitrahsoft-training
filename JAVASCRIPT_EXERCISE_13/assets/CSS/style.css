@@ -1,0 +1,7 @@
+.gradient-custom {
+    background: -webkit-linear-gradient(left, #4C131A, #B2505C);
+    height: 60rem;
+}
+form {
+    height: 90vh;
+}

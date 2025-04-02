@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Task 1</title>
+        <link href="assets/CSS/bootstrap.css" rel="stylesheet">
+        <script src="assets/JS/script.js"></script>
+    </head>
+    <body class="bg-secondary p-3">
+        <div class="background w-50 mx-auto">
+            <div class="card mt-5 p-4 border-black">
+                <div class="mx-auto">
+                    <p class="fw-bold mb-2">Find the largest and smallest word in a sentence</p>
+                    <label for="textBox" class="form-label">Enter the sentence below:</label>
+                    <input type="text" class="form-control" id="textBox" placeholder="Type here...">
+                </div>
+                <p class="text-danger mx-auto mt-3 fw-bold" id="validationError"></p>
+                <div class="mx-auto">
+                    <button class="btn btn-primary button" onclick="findResult()">Fetch Result</button>
+                    <button class="btn btn-secondary button" onclick="reset()">Reset</button>
+                </div>
+                <div class="mx-auto">
+                    <p class="text-success m-0 mt-3 fw-bold" id="resultSmall"></p>
+                    <p class="text-success fw-bold" id="resultLarge"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

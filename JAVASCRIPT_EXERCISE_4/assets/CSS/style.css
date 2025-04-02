@@ -1,0 +1,9 @@
+.background {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40rem;
+}
+.form-control:focus{
+    box-shadow: none;
+}
