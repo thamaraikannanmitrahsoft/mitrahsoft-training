@@ -1,0 +1,45 @@
+input::placeholder {
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(180, 180, 180);
+    border-radius: 20px;
+}
+
+.backgroundImg {
+    background-image: url('../../assets/chatBackground.jpeg');
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    border-bottom-right-radius: 30px;
+}
+
+.notch {
+    width: 9%;
+    height: 20px;
+    background-color: #000000e3;
+    border-radius: 25px;
+    transform: translateY(-30%);
+}
+
+.statusDot{
+    left: 0;
+    top: 6px;
+    height: 12px;
+    width: 12px;
+    background-color: #0fa723;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.card-footer{
+    border-bottom-right-radius: 30px;
+}

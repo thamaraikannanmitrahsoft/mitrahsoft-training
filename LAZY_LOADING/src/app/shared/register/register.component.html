@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body class="d-flex align-items-center">
+    <form class="row mt-0 p-5 shadow-lg bg-white w-25 mx-auto" [formGroup]="registerForm">
+        <div>
+            <label for="name" class="form-label">Name</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"></path>
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1">
+                        </path>
+                    </svg>
+                </span>
+                <input type="text" id="name" formControlName="name" class="form-control rounded-1">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputDate" class="mb-2">Date of Birth</label>
+            <input type="date" id="exampleInputDate" formControlName="dob" class="mb-2 form-control rounded-1">
+        </div>
+
+        <div>
+            <label for="mobileNumber" class="form-label">Mobile Number</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-phone-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0" />
+                    </svg>
+                </span>
+                <input type="tel" id="mobileNumber" formControlName="mobileNumber" class="form-control rounded-1">
+            </div>
+        </div>
+
+        <div>
+            <label for="inputEmail4" class="form-label">Email</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                    </svg>
+                </span>
+                <input type="email" id="inputEmail4" formControlName="email" class="form-control rounded-1">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputPassword" class="form-label">Password</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+                    </svg>
+                </span>
+                <input type="password" id="inputPassword" formControlName="password" class="form-control rounded-1">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+                    </svg>
+                </span>
+                <input type="password" id="confirmPassword" formControlName="confirmPassword"
+                    class="form-control rounded-1">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="DefaultFile" class="form-label">
+                Upload profile
+            </label>
+            <input class="form-control" accept="image/*" type="file" id="DefaultFile" formControlName="profilepic"
+                (change)="getImage($event)">
+        </div>
+
+        <div class="mt-4">
+            <button type="submit" (click)="onRegister()" class="btn btn-primary">Register</button>
+        </div>
+        <div class="mt-4">
+            <p>already registered click here to <a routerLink="/login">login</a></p>
+        </div>
+    </form>
+</body>
+
+</html>

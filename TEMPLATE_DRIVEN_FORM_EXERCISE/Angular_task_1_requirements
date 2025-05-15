@@ -1,0 +1,8 @@
+1. Create a new Angular project using compatible versions of Node and TypeScript.
+2. Design a form with 8 to 10 fields that include all types of input fields.
+3. Utilize only Bootstrap for the design.
+4. Implement one-way data binding for the heading and the submit/preview button, which should display "Form submitted" when clicked.
+5. Use event binding to create a dropdown that displays an image when a value is selected.
+6. Implement property binding for the src attribute of the image.
+7. For two-way data binding, when the submit/preview button is clicked, the values entered should be displayed next to the form, and the values should be populated in the input fields for preview.
+8. Create an input field for date and currency, and use pipes to display the formatted results.

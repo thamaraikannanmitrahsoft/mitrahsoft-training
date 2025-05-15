@@ -1,0 +1,25 @@
+<div class="tableContainer p-5 shadow-lg w-100 mx-auto">
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr class="text-center">
+                    <th>Method</th>
+                    <th>API</th>
+                    <th>End Point</th>
+                    <th>Payload</th>
+                </tr>
+            </thead>
+            <tbody class="text-center align-middle">
+                <tr *ngFor="let response of data">
+                    <td>{{response.method}}</td>
+                    <td>{{response.url}}</td>
+                    <td>{{response.endpoint}}</td>
+                    <td *ngIf="response.body == null">-</td>
+                    <td *ngIf="response.body !== null">
+                        <pre>{{response.body | json}}</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

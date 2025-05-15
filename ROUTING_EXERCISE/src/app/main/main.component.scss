@@ -1,0 +1,22 @@
+.wrapper {
+    display: grid;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #2f2f2f;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.footer {
+    background-color: #fff;
+    position: sticky;
+    bottom: 0;
+}
+
+.sidebar {
+    position: fixed;
+}

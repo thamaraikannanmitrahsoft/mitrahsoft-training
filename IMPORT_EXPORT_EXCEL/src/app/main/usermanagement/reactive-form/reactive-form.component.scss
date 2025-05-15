@@ -1,0 +1,24 @@
+label {
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.formContainer {
+    width: 40%;
+}
+
+.tableContainer {
+    width: 60%;
+}
+
+input[type="date"] {
+    display: flex;
+    flex-flow: row-reverse;
+    padding: 8px;
+    gap: 20px;
+    height: auto;
+}
+
+.row{
+    width: 50%;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <section class="vh-100" style="background-color: #eee;">
+            <div class="container h-100">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-5">
+                        <div class="card shadow-2-strong rounded-4">
+                            <div class="card-body p-5 text-center">
+
+                                <h3 class="mb-5 h1 fw-bolder">Log in</h3>
+
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="emailId" class="form-control" placeholder="Email address"
+                                        formControlName="COD_EMAIL" />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="loginPassword" class="form-control"
+                                        placeholder="Password" formControlName="COD_PASSWORD" />
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Login</button>
+
+                                <div class="text-center mt-4">
+                                    <p>Don't have an account? <a routerLink="/register"> Register</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+
+</html>

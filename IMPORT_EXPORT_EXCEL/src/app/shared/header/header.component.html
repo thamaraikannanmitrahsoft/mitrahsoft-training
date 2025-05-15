@@ -1,0 +1,9 @@
+<div class="name">
+  <h1 class="fw-bolder">Welcome {{displayName}}!</h1>
+</div>
+<div class="profilePic mt-2">
+  <img [src]="profilePic" alt="profile" class="rounded-circle mt-2" alt="profile" width="40" height="40">
+</div>
+<div class="logoutButton mt-3">
+  <button type="button" class="mt-1 fw-bold btn btn-primary btn-sm  rounded-pill" (click)="logoutUser()">Logout</button>
+</div>

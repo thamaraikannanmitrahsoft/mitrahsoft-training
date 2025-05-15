@@ -1,0 +1,191 @@
+<div class="container">
+  <div class="d-flex w-100 mx-auto gap-3">
+    <form class="row mt-0 formContainer p-5 shadow-lg bg-white" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name" class="form-label">Name</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"></path>
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1">
+              </path>
+            </svg>
+          </span>
+          <input type="text" id="name" formControlName="COD_NAME" class="form-control rounded-1"
+            [class.is-invalid]="COD_NAME?.invalid && (COD_NAME?.dirty || COD_NAME?.touched)">
+          <small class="invalid-feedback" *ngIf="COD_NAME?.errors?.['required']">Name is required</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputDate" class="mb-2">Date of Birth</label>
+        <input type="date" id="exampleInputDate" formControlName="COD_DOB" class="mb-2 form-control rounded-1"
+          [class.is-invalid]="COD_DOB?.invalid && (COD_DOB?.dirty || COD_DOB?.touched)">
+        <small class="invalid-feedback" *ngIf="COD_DOB?.errors?.['required']">Date of Birth is required</small>
+      </div>
+
+      <div>
+        <label for="mobileNumber" class="form-label">Mobile Number</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0" />
+            </svg>
+          </span>
+          <input type="tel" id="mobileNumber" formControlName="COD_MOBILE" class="form-control rounded-1"
+            [class.is-invalid]="COD_MOBILE?.invalid && (COD_MOBILE?.dirty || COD_MOBILE?.touched)">
+          <small class="invalid-feedback" *ngIf="COD_MOBILE?.errors?.['required']">Mobile Number is required</small>
+        </div>
+      </div>
+
+      <div>
+        <label for="inputEmail4" class="form-label">Email</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-envelope-fill" viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            </svg>
+          </span>
+          <input type="email" id="inputEmail4" formControlName="COD_EMAIL" class="form-control rounded-1"
+            [class.is-invalid]="COD_EMAIL?.invalid && (COD_EMAIL?.dirty || COD_EMAIL?.touched)">
+          <small class="invalid-feedback" *ngIf="COD_EMAIL?.errors?.['required']">email is required</small>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputPassword" class="form-label">Password</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+            </svg>
+          </span>
+          <input type="password" id="inputPassword" formControlName="COD_PASSWORD" class="form-control rounded-1"
+            [class.is-invalid]="COD_PASSWORD?.invalid && (COD_PASSWORD?.dirty || COD_PASSWORD?.touched)">
+          <small *ngIf="COD_PASSWORD?.errors?.['required']" class="invalid-feedback">Password is required</small>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+            </svg>
+          </span>
+          <input type="password" id="confirmPassword" formControlName="COD_CONFIRMPASSWORD"
+            class="form-control rounded-1"
+            [class.is-invalid]="COD_CONFIRMPASSWORD?.invalid && (COD_CONFIRMPASSWORD?.dirty || COD_CONFIRMPASSWORD?.touched)">
+          <small class="invalid-feedback" *ngIf="COD_CONFIRMPASSWORD?.errors?.['required']">Confirm password is
+            required</small>
+          <div *ngIf="COD_CONFIRMPASSWORD?.errors?.['passwordMatchValidator']" class="invalid-feedback">
+            <small>Password and confirm password didn't match.</small>
+          </div>
+        </div>
+      </div>
+
+      <div formArrayName="foodItems">
+        <label>Food Preferences</label>
+        <div class="mt-2" *ngFor="let group of foodItems.controls; let i = index" [formGroupName]="i">
+          <div class="mt-2">
+            <label>Timing:</label>
+            <select class="mx-3 p-2 rounded-2" formControlName="timing" (change)="onChanges(i)">
+              <option value="" disabled selected>--Select food Timing--</option>
+              <option *ngFor="let time of getAvailableTimings(i)" [value]="time.id">{{ time.value }}</option>
+            </select>
+          </div>
+
+          <div class="mt-3">
+            <label>Preferences:</label>
+            <select class="mx-3 p-2 rounded-2" formControlName="preferences">
+              <option value="" disabled selected>--Select food preference--</option>
+              <option *ngFor="let pref of getPreferencesByTiming(group.get('timing')?.value)" [value]="pref.id">{{
+                pref.label }}</option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div>
+              <button type="button" class="mt-2 fw-bold btn btn-outline-secondary btn-sm rounded-pill"
+                *ngIf="foodItems.length > 1" (click)="deleteRow(i)">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <button type="button" class="mt-1 fw-bold btn btn-primary btn-sm rounded-pill" *ngIf="foodItems.length < 3"
+          (click)="addRow()">Add</button>
+      </div>
+
+      <div>
+        <button type="submit" class="mt-4 col-md-12 fw-bold btn btn-success rounded-pill shadow-lg">submit</button>
+      </div>
+    </form>
+
+    <div class="mx-3 tableContainer p-5 shadow-lg w-50">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr class="text-center">
+              <th>Edit</th>
+              <th>Delete</th>
+              <th>Name</th>
+              <th>DOB</th>
+              <th>Mobile Number</th>
+              <th>Email</th>
+              <th>Food Preferences</th>
+            </tr>
+          </thead>
+          <tbody class="text-center align-middle">
+            <tr *ngFor="let user of users; let i=index">
+              <td>
+                <button class="btn btn-primary btn-sm" (click)="editRecord(user, i)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path
+                      d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                    <path fill-rule="evenodd"
+                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                  </svg>
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteRecord(user.id)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                  </svg>
+                </button>
+              </td>
+              <td>{{user.COD_NAME}}</td>
+              <td>{{user.COD_DOB}}</td>
+              <td>{{user.COD_MOBILE}}</td>
+              <td>{{user.COD_EMAIL}}</td>
+              <td *ngIf="user.foodItems && user.foodItems.length > 0">
+                <div *ngFor="let food of user.foodItems">
+                  <strong>{{ getTimingLabel(food.timing) }}:</strong>
+                  {{ getPreferenceLabels(food.preferences).join(', ') }}
+                </div>
+              </td>
+              <td *ngIf="!user.foodItems || user.foodItems.length == 0">
+                <div>-</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

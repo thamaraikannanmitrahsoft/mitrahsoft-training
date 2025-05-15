@@ -1,0 +1,93 @@
+<div class="templateForm text-white">
+    <h3 class="p-3 text-center">{{ title }}</h3>
+    <div class="parentContainer d-flex w-100 p-5 pt-0 gap-5">
+        <form class="w-50">
+            <h3 class="p-3 text-center mx-auto">Form</h3>
+            <div class="form-group">
+                <label for="exampleInputText" class="mb-2 fw-bold">Name</label>
+                <input type="text" [(ngModel)]="inputName" class="mb-2 form-control" name="name" id="exampleInputText"
+                    placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="mb-2 fw-bold">Email address</label>
+                <input type="email" class="mb-2 form-control" name="email" id="exampleInputEmail1"
+                    placeholder="Enter email" [(ngModel)]="inputEmail">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword" class="mb-2 fw-bold">Password</label>
+                <input type="password" class="mb-2 form-control" name="password" id="exampleInputPassword"
+                    placeholder="Password" [(ngModel)]="inputPassword">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDate" class="mb-2 fw-bold">Date of Birth</label>
+                <input type="date" class="mb-2 form-control" name="dob" id="exampleInputDate" [(ngModel)]="inputDob">
+            </div>
+            <label class="mb-2 fw-bold">Gender</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Male"
+                    (change)="onChange($event)">
+                <label class="form-check-label" for="exampleRadios2">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Female"
+                    (change)="onChange($event)">
+                <label class="form-check-label" for="exampleRadios2">
+                    Female
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputSalary" class="mb-2 fw-bold">Salary</label>
+                <input type="number" class="mb-2 form-control" name="salary" id="exampleInputSalary"
+                    [(ngModel)]="inputSalary">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="status" id="defaultCheck1"
+                    [(ngModel)]="inputStatus">
+                <label class="form-check-label mb-2" for="defaultCheck1">
+                    Status
+                </label>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a profile picture
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" (click)="onSelect('assets/profile1.jpeg')">Profile 1</a>
+                    <a class="dropdown-item" href="#" (click)="onSelect('assets/profile2.jpeg')">Profile 2</a>
+                </div>
+            </div>
+            <button type="submit" class=" mt-3 btn btn-primary" (click)="displayInformation()">Submit</button>
+            <p class="text-success mt-2 fw-bold">{{ submitText }}</p>
+        </form>
+        <div class="w-50 d-flex flex-column" id="show">
+            <div [hidden]="isshow">
+                <h3 class="p-3 text-center">Preview</h3>
+            </div>
+            <div class="d-flex">
+                <div class="w-50" [hidden]="isshow">
+                    <p class="fw-bold"> Name: </p>
+                    <p>{{ inputName }}</p>
+                    <p class="fw-bold">Email:</p>
+                    <p>{{ inputEmail }}</p>
+                    <p class="fw-bold">Password:</p>
+                    <p>{{inputPassword}}</p>
+                    <p class="fw-bold">Date of Birth:</p>
+                    <p>{{inputDob | date}}</p>
+                    <p class="fw-bold">Gender:</p>
+                    <p>{{inputRadio}}</p>
+                    <p class="fw-bold">Salary:</p>
+                    <p>{{inputSalary | currency: 'INR'}}</p>
+                    <p class="fw-bold">Status:</p>
+                    <p>{{inputStatus}}</p>
+                </div>
+                <div class="w-50" [hidden]="isshow">
+                    <img [src]="selectedImage" class="rounded-circle mt-2" alt="profile" width="150" height="150">
+                    <p class="fw-bold ms-3 mt-2">Profile Picture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

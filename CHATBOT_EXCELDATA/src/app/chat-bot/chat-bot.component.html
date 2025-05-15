@@ -1,0 +1,67 @@
+<div class="py-5 mobileWidth justify-content-center mx-auto rounded-5">
+    <div class="row d-flex justify-content-center m-0">
+        <div class="card border-4 border-dark shadow-lg rounded-5 p-0">
+            <div class="card-header d-flex justify-content-between align-items-center p-3">
+                <h5>Chat</h5>
+                <div class="flex-grow-1 d-flex justify-content-center">
+                    <div class="notch"></div>
+                </div>
+                <div class="d-flex">
+                    <i class="bi bi-reception-4 mx-1"></i>
+                    <i class="fw-5 bi bi-wifi-off"></i>
+                    <i class="bi bi-battery-half mx-1"></i>
+                </div>
+            </div>
+
+            <div class="card-body scrollbar overflow-auto" [style.background-image]="'url(' + base64Background + ')'">
+                <div *ngFor="let message of messages">
+                    <div
+                        [ngClass]="message.author === 'bot' ? 'd-flex justify-content-start' : 'd-flex justify-content-end mb-4 pt-1'">
+                        <img *ngIf="message.author === 'user'" src="../../assets/profile1.jpeg" alt="avatar"
+                            style="width: 45px;" class="rounded-5">
+                        <img *ngIf="message.author === 'bot'" src="../../assets/profile2.jpeg" alt="avatar"
+                            style="width: 45px;" class="rounded-5 me-2 align-self-center">
+                        <div>
+                            <p class="small p-2 ms-3 mb-1 rounded-3"
+                                [ngClass]="message.author === 'bot' ? 'bg-body-tertiary' : 'text-white bg-primary'">
+                                {{ message.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start mt-2" *ngIf="isshow">
+                    <img src="../../assets/profile2.jpeg" alt="avatar" style="width: 45px;" class="rounded-5 me-2">
+                    <div class="chat-bubble">
+                        <div class="typing">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <emoji-mart *ngIf="isemojiSelect" (emojiSelect)="addEmoji($event)"></emoji-mart>
+                </div>
+            </div>
+
+            <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3 divider">
+                <img src="../../assets/profile1.jpeg" alt="avatar" style="width: 45px;" class="rounded-5 me-3">
+                <input type="text" class="form-control me-1" placeholder="Send a message" [(ngModel)]="value"
+                    (keyup.enter)="sendMessage()">
+                <label for="imgInput">
+                    <i class="bi bi-three-dots-vertical me-3"></i>
+                </label>
+                <input type="file" hidden id="imgInput" class="form-control-file" (change)="getImage($event)">
+                <a class="me-3 text-muted" href="#" (click)="toggleEmoji()"><i
+                        class="bi bi-emoji-laughing-fill"></i></a>
+                <label for="fileInput">
+                    <i class="fas fa-paperclip"></i>
+                </label>
+                <input type="file" hidden id="fileInput" class="form-control-file" (change)="onImport($event)">
+                <button type="button" class="btn btn-outline-secondary border-0 rounded-pill btn-sm p-0 ms-3"
+                    (click)="onExport()"><i class="fa-solid fa-download"></i></button>
+                <a class="ms-3" href="#" (click)="sendMessage()"><i class="bi bi-send-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
