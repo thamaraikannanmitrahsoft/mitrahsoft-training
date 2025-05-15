@@ -1,0 +1,49 @@
+<div>
+  <h1 class="text-center">Company Detail JSON</h1>
+  <div class="d-flex justify-content-center">
+    <div class="p-3" *ngFor="let item of checkbox">
+      <input type="checkbox" [(ngModel)]="item.checked" (change)="filterData()">
+      {{ item.title }}
+    </div>
+  </div>
+  <div class="d-flex justify-content-center m-3">
+    <label>Year of Experience:</label>
+    <select class="mx-3" [(ngModel)]="selectedExperience" (change)="filterData()">
+      <option value="0">select</option>
+      <option *ngFor="let year of experienceArray" [value]="year">
+        {{ year }}
+      </option>
+    </select>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table table-bordered w-75">
+      <thead class="table-dark">
+        <tr class="text-center">
+          <th scope="col">Company Name</th>
+          <th scope="col">Project</th>
+          <th scope="col">Project Details</th>
+          <th scope="col" colspan="4">Members</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let details of filteredCompanyDetails">
+          <tr class="text-center align-middle">
+            <td [attr.rowspan]="details.members.length +1">{{details.name}}</td>
+            <td [attr.rowspan]="details.members.length +1">{{details.projectName}}</td>
+            <td [attr.rowspan]="details.members.length +1">Project duration is {{details.projectDuration}}</td>
+            <td class="fw-bold">Name</td>
+            <td class="fw-bold">Experience</td>
+            <td class="fw-bold">Position</td>
+            <td class="fw-bold">Skills</td>
+          </tr>
+          <tr class="text-center align-middle" *ngFor="let member of details.members">
+            <td>{{member.name}}</td>
+            <td>{{member.yearOfExperience}}</td>
+            <td>{{member.position}}</td>
+            <td>{{member.skills}}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

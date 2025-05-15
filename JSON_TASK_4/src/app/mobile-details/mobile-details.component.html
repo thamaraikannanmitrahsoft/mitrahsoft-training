@@ -1,0 +1,46 @@
+<div>
+  <h1 class="text-center">Mobile details JSON</h1>
+  <div class="text-center">
+    <label for="searchBox">Search:</label>
+    <input [(ngModel)]="searchText" class="mx-3" id="searchBox" type="search" (keyup)="filterData()">
+  </div>
+  <div class="d-flex justify-content-center p-3">
+    <label class="mx-2">Storage:</label>
+    <div class="mx-1" *ngFor="let item of checkbox">
+      <input type="checkbox" [(ngModel)]="item.checked" (change)="filterData()">
+      {{ item.value }}
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table table-bordered w-50">
+      <thead class="table-dark">
+        <tr class="text-center">
+          <th>Brand</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Processor</th>
+          <th>Colors</th>
+          <th>Storage Capacity</th>
+        </tr>
+      </thead>
+      <tbody class="text-center align-middle">
+        <ng-container *ngFor="let phone of filteredMobileDetails">
+          <tr>
+            <td [attr.rowspan]="phone.models.length + 1">{{ phone.brand }}</td>
+          </tr>
+          <tr *ngFor="let model of phone.models">
+            <td>{{ model.name }}</td>
+            <td>{{ model.price }}</td>
+            <td>{{ model.processor }}</td>
+            <td>
+              <div *ngFor="let color of model.colors">{{ color }}</div>
+            </td>
+            <td>
+              <div *ngFor="let storage of model.storageCapacity">{{ storage }}</div>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

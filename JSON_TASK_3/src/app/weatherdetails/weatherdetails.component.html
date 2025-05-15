@@ -1,0 +1,33 @@
+<div>
+  <h1 class="text-center">Weather details JSON</h1>
+  <div class="d-flex justify-content-center">
+    <div class="p-3" *ngFor="let item of checkbox">
+      <input type="checkbox" [(ngModel)]="item.checked" (change)="filterData()">
+      {{ item.title }}
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table table-bordered w-75">
+      <thead class="table-dark">
+        <tr class="text-center">
+          <th>Country</th>
+          <th>City</th>
+          <th>Weather</th>
+          <th>Temperature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let details of filteredWeatherDetails">
+          <tr class="fw-bold text-center align-middle">
+            <td [attr.rowspan]='details.cities.length + 1'>{{details.country}}</td>
+          </tr>
+          <tr *ngFor="let city of details.cities">
+            <td>{{city.name}}</td>
+            <td *ngFor="let weather of city.weather">{{weather.description}}</td>
+            <td [style.color]="getColor(city.main.temp)">{{city.main.temp}}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
