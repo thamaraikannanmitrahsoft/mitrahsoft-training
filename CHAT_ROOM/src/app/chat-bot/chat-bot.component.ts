@@ -3,7 +3,6 @@ import { ChatService, Message } from '../core/services/chat.service';
 import { Subject, Subscription } from 'rxjs';
 import { SocketService } from '../core/services/socket.service';
 import { HttpClient } from '@angular/common/http';
-import { Environments } from '../core/environments/environments';
 
 @Component({
   selector: 'app-chat-bot',
@@ -64,21 +63,8 @@ export class ChatBotComponent implements OnInit {
     this.socketService.connectSocket();
     this.socketService.emit('registerUser', this.currentUser)
     this.socketService.on('onlineUsers').subscribe((data) => {
-      console.log('onlineUser', data);
       this.onlineUsers = data.filter((user: any) => user !== this.currentUser)
       this.liveUser = this.onlineUsers[0];
-      console.log('live', this.liveUser);
-      // if (this.onlineUsers.length > 0) {
-      //   if (this.pastUser.length == 0) {
-      //     this.pastUser.push(this.onlineUsers)
-      //   }
-      //   else {
-      //     const user = this.onlineUsers.filter((user: any) => user !== this.toUser)
-      //     if (user.length > 0) {
-      //       this.pastUser.push(user)
-      //     }
-      //   }
-      // }
     });
     this.socketService.on('newMessage').subscribe((data) => {
       this.messages.push(data)
@@ -88,16 +74,13 @@ export class ChatBotComponent implements OnInit {
   }
   clearMessages() {
     this.socketService.emit('deleteAllMessages', '')
-    // this.getMessageList()
   }
   getMessageList() {
     this.socketService.on('messageList').subscribe((data) => {
-      console.log('allmsg', data);
       this.messages = data;
     })
   }
   ngOnDestroy() {
-    console.log('hi');
     this.socketService.disconnectSocket()
   }
 }
